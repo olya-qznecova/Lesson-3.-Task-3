@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <script src="jquery.js"></script>
+
+</head>
 <body>
 
-<form id="main">
+<form onclick="ButtonSetDefaultValue()" method="post" id="main">
 
     <label for="name">
         Ваше имя:<br>
@@ -25,12 +27,20 @@
         <input type="text" id="phone">
     </label><br>
 
+    <label for="city">
+        Выберите город:<br>
+        <select  name="your-city" id="city" class="cities">
+            <option disabled>Выберите город:</option>
+        </select>
+    </label><br>
+
     <label for="text">
         Ваше сообщение:<br>
         <textarea name="" id="text" cols="30" rows="10"></textarea>
     </label><br>
 
-    <button onclick="CheckData()">Отправить</button>
+    <button id="checkButton">Отправить</button>
+
 
 </form>
 <script src="code.js">
